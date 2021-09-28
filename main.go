@@ -215,7 +215,7 @@ func returnEdi810(w http.ResponseWriter, r *http.Request) {
 func handleRequests() {
 	http.HandleFunc("/", homePage)
 	http.HandleFunc("/edi810", returnEdi810)
-	log.Fatal(http.ListenAndServe(":10000", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 func main() {
