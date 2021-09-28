@@ -53,10 +53,10 @@ type Segment struct {
 
 type Element struct {
 	/* The smallest information unit in the information structure.
-           A data element may be a single character code, a series of characters constituting a literal description or
-	   numeric quantity. The data element has two primary attributes, length and type. The length characteristic of a data
-	   element may be fixed or variable. Each data element is identified by a number used for reference in the Data Element
-	   Dictionary. */
+        A data element may be a single character code, a series of characters constituting a literal description or
+	numeric quantity. The data element has two primary attributes, length and type. The length characteristic of a data
+	element may be fixed or variable. Each data element is identified by a number used for reference in the Data Element
+	Dictionary. */
 	Id    string
 	Value string
 }
