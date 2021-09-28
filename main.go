@@ -10,6 +10,11 @@ import (
 	"strings"
 )
 
+
+/*
+    INFORMATION UNIT
+    TODO(sbeagle): Move this to information_unit.go
+*/
 type Interchange struct {
 	/* Interchange Envelope.
 	TODO(sbeagle): describe */
@@ -48,8 +53,6 @@ type Segment struct {
 	elementSeparator  string
 	segmentTerminator byte
 }
-
-
 
 type Element struct {
 	/* The smallest information unit in the information structure.
@@ -118,6 +121,7 @@ func NewElement(id, value string) *Element {
 
 /*
    PARSER
+   TODO(sbeagle): Move this to parser.go
 */
 
 func GetSegments(file string, segmentTerminator byte) []Segment {
@@ -219,6 +223,7 @@ func GetSegmentTerminator(file string) byte {
 
 /*
    WEB API
+   TODO(sbeagle): move this to api.go
 */
 
 func homePage(w http.ResponseWriter, r *http.Request) {
@@ -238,6 +243,10 @@ func handleRequests() {
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
+/*
+    MAIN
+    TODO(sbeagle): Keep this here...
+*/
 func main() {
 	handleRequests()
 	edi := NewInterchange("data/sample810.txt")
