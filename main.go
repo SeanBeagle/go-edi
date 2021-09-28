@@ -13,7 +13,6 @@ import (
 type Interchange struct {
 	/* Interchange Envelope.
 	TODO(sbeagle): describe */
-	
 	Header            Segment
 	Trailer           Segment
 	FunctionalGroups  []FunctionalGroup
@@ -23,7 +22,6 @@ type Interchange struct {
 type FunctionalGroup struct {
 	/* Composed of one or more transaction sets of the same or similar types.
 	Enclosed by functional group header (GS) and functional group trailer (GE) segments. */
-	
 	Header          Segment
 	Trailer         Segment
 	TransactionSets []TransactionSet
@@ -33,7 +31,6 @@ type TransactionSet struct {
 	/* Composed of a specific group of segments that represent a common business document.
 	Each transaction set consists of the transaction set header (ST) as the first segment and contains at least one
 	segment before the transaction set trailer (SE). */
-	
 	Header   Segment
 	Trailer  Segment
 	Segments []Segment
@@ -46,7 +43,6 @@ type Segment struct {
 	segment identifier that comprises the first characters of the segment. When segments are combined to form a
 	transaction set, their use in the transaction set is defined by a segment requirement designator and a segment
 	sequence. Some segments may be repeated, and groups of segments may be repeated as loops. */
-	
 	Id                string
 	Elements          []Element
 	elementSeparator  string
@@ -61,7 +57,6 @@ type Element struct {
 	   numeric quantity. The data element has two primary attributes, length and type. The length characteristic of a data
 	   element may be fixed or variable. Each data element is identified by a number used for reference in the Data Element
 	   Dictionary. */
-	
 	Id    string
 	Value string
 }
