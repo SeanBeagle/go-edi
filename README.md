@@ -18,3 +18,7 @@ EDI library in Go
 :  [GE]-- Functional Group ---------------
 [IEA]-- Transmission Envelope ------------
  ```
+ 
+ # TODO
+ - [ ] @seanbeagle: Write Data Dictionary API to download formatting rules based on interchange version
+ - [ ] @seanbeagle: Write validator.go to validate formatting of interchange
