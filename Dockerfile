@@ -10,7 +10,7 @@ WORKDIR /app
 # RUN go mod download
 
 COPY *.go ./
-COPY data ./
+ADD data ./data
 
 RUN go env -w GO111MODULE=auto
 RUN go build -o /main
