@@ -12,6 +12,7 @@ WORKDIR /app
 COPY *.go ./
 COPY data ./
 
+RUN go env -w GO111MODULE=auto
 RUN go build -o /main
 
 EXPOSE 8080
